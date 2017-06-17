@@ -3,56 +3,32 @@ import java.util.Scanner;
 
 public class FileEx04 {
 	public static void main(String[] args){
-		InputStreamReader in1 = new InputStreamReader(System.in);
-		File[] farr = new File[2];
+		Scanner stdIn = new Scanner(System.in);
+		FileReader in = null;
+		FileWriter out = null;
+		File[] farr = { new File( stdIn.next() + ".txt"), new File(stdIn.next() + ".txt") };
 		
-		for(int i = 0; i < farr.length; i++){
-			farr[i] = new File(i + ".txt");
-		}
-		
-		FileWriter fout = null;
-		FileWriter fout2 = null;
 		try {
-			int c;
-			fout = new FileWriter(farr[0]);
-			while( (c = in1.read() ) != -1){
-				fout.write(c);
-			}
+			in = new FileReader(farr[0]);
+			out = new FileWriter("2.txt", true);
 			
-			fout.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		int c;
-		InputStreamReader in2 = new InputStreamReader(System.in);
-		try {
-			fout2 = new FileWriter(farr[1]);
-			while( (c = in2.read() ) != -1){
-				fout2.write(c);
+			int c;
+			while((c = in.read()) != -1){
+				out.write(c);
 			}
-			fout2.close();
-			in2.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			in.close(); 
+			
+			in = new FileReader(farr[1]);
+			while((c = in.read()) != -1){
+				out.write(c);
+			}
+			in.close();
+			out.close();
+		} catch (FileNotFoundException e) {
+			System.out.println("파일을 찾지 못하였습니다.");
+		}catch(IOException e){
+			System.out.println("입출력 오류");
 		}
-		
-//		InputStreamReader in = new InputStreamReader(System.in);
-//		
-//		FileWriter fout = null;
-//		int c;
-//		try {
-//			fout = new FileWriter("c:\\tmp\\a.txt");
-//			while((c = in.read()) != -1){
-//				fout.write(c);
-//			}
-//			in.close();
-//			fout.close();
-//		} catch (IOException e) {
-//			// TODO: handle exception
-//		}
 		
 		
 	}
