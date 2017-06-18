@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>a.jpg</name>
-			<type>1</type>
-			<location>C:/Users/dbs84/Downloads/Documents/KakaoTalk_20170615_133337227.jpg</location>
-		</link>
-	</linkedResources>
 </projectDescription>
