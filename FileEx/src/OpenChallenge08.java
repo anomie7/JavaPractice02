@@ -1,3 +1,4 @@
+import java.awt.Label;
 import java.io.*;
 import java.util.*;
 
@@ -18,18 +19,28 @@ public class OpenChallenge08 {
 				strList.add(tmp);
 			}
 			
-			
 			while(true){
 				int c = rand.nextInt(strList.size());
 				char[] ch = strList.get(c).toCharArray();
-				int[] r = new int[2];
 				
-				findRandNum(r, rand, ch);
+				int n;
+				int[] r;
+				do{
+					System.out.println("가리는 숫자의 갯수는 문자열 길이의 절반보다 작아야합니다.");
+					n = stdIn.nextInt();
+					r = new int[n];
+				}while(n > ch.length/2 || n < 0);
+				
+				ArrayList<Integer> randList = getRandNum(r, rand, ch, n);
+				TreeMap<Character, Integer> correct = getTreeMap(ch, r);
 				
 				System.out.println(strList.get(c));
-				System.out.println(r[0] + " " + r[1]);
+				for(int i : r){
+					System.out.print(i + " ");
+				}
+				System.out.println();
 				
-				boolean isRun  = runGame(ch, r, stdIn);
+				boolean isRun  = runGame(ch, randList, stdIn, correct);
 				
 				if(isRun){
 					if(!isNext(stdIn)){
@@ -48,6 +59,15 @@ public class OpenChallenge08 {
 		}
 	}
 
+	private static TreeMap<Character, Integer> getTreeMap(char[] ch, int[] r) {
+		// TODO Auto-generated method stub
+		TreeMap<Character, Integer> c = new TreeMap<Character, Integer>();
+		for(int i = 0; i < r.length; i++){
+			c.put(ch[r[i]], r[i]);
+		}
+		return c;
+	}
+
 	private static boolean isNext(Scanner stdIn) {
 		// TODO Auto-generated method stub
 		System.out.println("Next(y/n)?");
@@ -61,66 +81,68 @@ public class OpenChallenge08 {
 		return true;
 	}
 
-	private static boolean runGame(char[] ch, int[] r, Scanner stdIn) {
-		boolean[] isRight = { false, false };
-		printWord(ch, r, isRight);
+	private static boolean runGame(char[] ch, ArrayList<Integer> randList, Scanner stdIn, TreeMap<Character, Integer> c) {
+		printWord(ch, randList, c);
 		
 		for(int i = 0; i < 5; i++){
 			char tmp = stdIn.next().charAt(0);
-			if(ch[r[0]] == tmp && !isRight[0]){
-				isRight[0] = true;
-			} else if(ch[r[1]] == tmp && !isRight[1]){
-				isRight[1] = true;
+			if(c.get(tmp) != null){
+				ch[c.get(tmp)] = tmp;
+				randList.remove(c.get(tmp));
+				c.remove(tmp);
 			}
-			printWord(ch, r, isRight);
-			
-			if(isRight[0] && isRight[1]){
-				return true;				
-			}
+			printWord(ch, randList, c);
+			if(c.size() == 0) return true;
 		}
 		System.out.println("5번 실패 하였습니다.");
 		return false;
 	}
 
-	private static void findRandNum(int[] r, Random rand, char[] ch) {
+	private static ArrayList<Integer> getRandNum(int[] r, Random rand, char[] ch, int n) {
 		// TODO Auto-generated method stub
 		while(true){
-			r[0] = rand.nextInt(ch.length);
-			r[1] = rand.nextInt(ch.length);
+			for(int i = 0; i < n; i++){
+				r[i] = rand.nextInt(ch.length);
+			}
 			
-			if(r[0] != r[1] && r[0] < r[1]) break;
+			boolean isequal = true;
+			label1 : 
+			for(int i = 0; i < n-1; i++)
+				for(int j = i+1; j < n; j++){
+					if(r[i] == r[j]){
+						isequal = false;
+						break label1;
+					}
+				}
+//			if(r[0] != r[1] && r[0] < r[1]) break;
+			if(isequal) break;
 		}
+		
+		for(int i = n-1; i > 0; i--){
+			for(int j = 0; j < i; j++){
+				if(r[j] > r[j+1]){
+					int tmp = r[j];
+					r[j] = r[j+1];
+					r[j+1] = tmp;
+				}
+			}
+		}
+		ArrayList<Integer> randList = new ArrayList<Integer>();
+		for(int i : r){
+			randList.add(i);
+		}
+		return randList;
 	}
 
-	private static void printWord(char[] ch, int[] r, boolean[] isRight) {
-		int a = 1, b = 1;
-		if(isRight[0]){
-			a = 0;
-		} else{
-			a = 1;
+	private static void printWord(char[] ch, ArrayList<Integer> randList, TreeMap<Character, Integer> c) {
+		for(int i = 0; i < randList.size(); i++){
+			ch[randList.get(i)] = '_';
 		}
-		
-		if(isRight[1]){
-			b = 0;
-		} else {
-			b = 1;
-		}
-		
-		for(int i = 0; i < r[0]; i++){
-			System.out.print(ch[i]);
-		}
-		if(!isRight[0]) System.out.print("_");
-		
-		for(int i = r[0]+a; i < r[1]; i++){
-			System.out.print(ch[i]);
-		}
-		
-		if(!isRight[1]) System.out.print("_");
-		
-		for(int i = r[1]+b; i < ch.length; i++){
-			System.out.print(ch[i]);
+		for(char ch1 : ch){
+			System.out.print(ch1);
 		}
 		System.out.println();
+		
 	}
 
 }
