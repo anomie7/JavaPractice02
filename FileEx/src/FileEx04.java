@@ -8,6 +8,7 @@ public class FileEx04 {
 		FileWriter out = null;
 		File[] farr = { new File( stdIn.next() + ".txt"), new File(stdIn.next() + ".txt") };
 		
+		stdIn.close();
 		try {
 			in = new FileReader(farr[0]);
 			out = new FileWriter("2.txt", true);

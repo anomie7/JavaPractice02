@@ -16,13 +16,14 @@ public class FileEx07 {
 		BufferedInputStream in = null;
 		BufferedOutputStream out = null;
 		try {
+			byte[] b = new byte[1000];
 			in = new BufferedInputStream(new FileInputStream(f1));
 			out = new BufferedOutputStream(new FileOutputStream(f2));
 			
 			while(true){
-				c = in.read();
+				c = in.read(b, 0, b.length);
 				if(c == -1) break;
-				out.write(c);
+				out.write(b, 0, b.length);
 			}
 			in.close();
 			out.close();
