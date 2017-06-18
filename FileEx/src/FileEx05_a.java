@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class FileEx05 {
+public class FileEx05_a {
 	public static void main(String[] args){
 		Scanner stdIn = new Scanner(System.in);
 		
@@ -10,25 +10,20 @@ public class FileEx05 {
 		
 		System.out.print("파일2의 이름 : ");
 		String fname2 = stdIn.next();
+		stdIn.close();
 		
 		try {
 			BufferedInputStream[] in = { new BufferedInputStream(new FileInputStream(fname1)),
 										new BufferedInputStream(new FileInputStream(fname2)) };
 			
-			
-			
-			
-				
 			if(compare(in[0], in[1])){
 				System.out.println("파일이 같습니다.");
 			}else{
 				System.out.println("파일이 다릅니다.");
 			}
-			if(in[0] != null)
-				in[0].close();
 			
-			if(in[1] != null)
-				in[1].close();
+			if(in[0] != null) in[0].close();
+			if(in[1] != null) in[1].close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -5,7 +5,5 @@ In java, 3 streams are created for us automatically. All these streams are attac
 1) System.out: standard output stream
 
 2) System.in: standard input stream
-
 3) System.err: standard error stream
-
 Let's see the code to print output and error message to the console.
