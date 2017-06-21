@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_QA6osPQSEeahqJTqLQ6-fg" name="NewModel">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_41BUYPQSEeanObOPG0iyQw" name="NewModel" node="_6h_MgPQSEeanObOPG0iyQw _6aQ-cPQTEeanObOPG0iyQw _9Tf1YPQTEeanObOPG0iyQw _T0puIPQUEeanObOPG0iyQw _WAsH4PQUEeanObOPG0iyQw _jP0boPQUEeanObOPG0iyQw">
+    <ownedParameter xmi:id="_NcaPIPQTEeanObOPG0iyQw" name="Parameter1"/>
+    <ownedParameter xmi:id="_ZT6BkPQTEeanObOPG0iyQw" name="Parameter2"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_cQIssPQUEeanObOPG0iyQw" target="_6aQ-cPQTEeanObOPG0iyQw" source="_6h_MgPQSEeanObOPG0iyQw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_cQJTwPQUEeanObOPG0iyQw" name="Initial1_To_검색유형_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_cQiVUPQUEeanObOPG0iyQw" name="Initial1_To_검색유형_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_eNGIoPQUEeanObOPG0iyQw" target="_9Tf1YPQTEeanObOPG0iyQw" source="_6aQ-cPQTEeanObOPG0iyQw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_eNGvsPQUEeanObOPG0iyQw" name="검색유형_To_검색조건입력_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_eNfKMPQUEeanObOPG0iyQw" name="검색유형_To_검색조건입력_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_e6L4IPQUEeanObOPG0iyQw" target="_T0puIPQUEeanObOPG0iyQw" source="_6aQ-cPQTEeanObOPG0iyQw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_e6MfMPQUEeanObOPG0iyQw" name="검색유형_To_검색조건입력_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_e6NGQPQUEeanObOPG0iyQw" name="검색유형_To_검색조건입력_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_gVNrsPQUEeanObOPG0iyQw" target="_WAsH4PQUEeanObOPG0iyQw" source="_9Tf1YPQTEeanObOPG0iyQw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_gVNrsfQUEeanObOPG0iyQw" name="검색조건입력_To_검색조건입력_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_gVib0PQUEeanObOPG0iyQw" name="검색조건입력_To_검색조건입력_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_pcBfMPQUEeanObOPG0iyQw" target="_jP0boPQUEeanObOPG0iyQw" source="_WAsH4PQUEeanObOPG0iyQw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_pcCGQPQUEeanObOPG0iyQw" name="검색조건입력_To_ActivityFinal1_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_pcfZQPQUEeanObOPG0iyQw" name="검색조건입력_To_ActivityFinal1_weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_6h_MgPQSEeanObOPG0iyQw" name="Initial1" outgoing="_cQIssPQUEeanObOPG0iyQw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_6aQ-cPQTEeanObOPG0iyQw" name="검색유형" incoming="_cQIssPQUEeanObOPG0iyQw" outgoing="_eNGIoPQUEeanObOPG0iyQw _e6L4IPQUEeanObOPG0iyQw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_9Tf1YPQTEeanObOPG0iyQw" name="검색조건입력" incoming="_eNGIoPQUEeanObOPG0iyQw" outgoing="_gVNrsPQUEeanObOPG0iyQw" body=""/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_T0puIPQUEeanObOPG0iyQw" name="카테고리검색" incoming="_e6L4IPQUEeanObOPG0iyQw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_WAsH4PQUEeanObOPG0iyQw" name="검색리스트 조회" incoming="_gVNrsPQUEeanObOPG0iyQw" outgoing="_pcBfMPQUEeanObOPG0iyQw"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_jP0boPQUEeanObOPG0iyQw" name="ActivityFinal1" incoming="_pcBfMPQUEeanObOPG0iyQw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_4vawwPQUEeanObOPG0iyQw" name="socialdining" node="_Lv4uwPTKEeatWYWiC66E2A _0ZVpoPTKEeatWYWiC66E2A _4IteYPTKEeatWYWiC66E2A _4Row4PTKEeatWYWiC66E2A _B6wAMPTLEeatWYWiC66E2A _DjyakPTLEeatWYWiC66E2A _EWqpAPTLEeatWYWiC66E2A _X2bNUPTLEeatWYWiC66E2A _r2TRkPTKEeatWYWiC66E2A">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_zJ3ecPTNEeatWYWiC66E2A" target="_r2TRkPTKEeatWYWiC66E2A" source="_Lv4uwPTKEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_zJ3ecfTNEeatWYWiC66E2A" name="Initial1_To_모임 개설_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_zKKZYPTNEeatWYWiC66E2A" name="Initial1_To_모임 개설_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_z9DO4PTNEeatWYWiC66E2A" target="_4IteYPTKEeatWYWiC66E2A" source="_r2TRkPTKEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_z9DO4fTNEeatWYWiC66E2A" name="모임 개설_To_모임 정보 입력_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_z9WJ0PTNEeatWYWiC66E2A" name="모임 개설_To_모임 정보 입력_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_0p-mUPTNEeatWYWiC66E2A" target="_0ZVpoPTKEeatWYWiC66E2A" source="_4IteYPTKEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_0p-mUfTNEeatWYWiC66E2A" name="모임 정보 입력_To_개설비 부담 유형_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_0qRhQPTNEeatWYWiC66E2A" name="모임 정보 입력_To_개설비 부담 유형_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_1axxIPTNEeatWYWiC66E2A" target="_4Row4PTKEeatWYWiC66E2A" source="_0ZVpoPTKEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_1a67EPTNEeatWYWiC66E2A" name="개설비 부담 유형_To_판매자 부담_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_1bN2APTNEeatWYWiC66E2A" name="개설비 부담 유형_To_판매자 부담_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_2Fnd4PTNEeatWYWiC66E2A" target="_B6wAMPTLEeatWYWiC66E2A" source="_0ZVpoPTKEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_2Fnd4fTNEeatWYWiC66E2A" name="개설비 부담 유형_To_참가자 n/1 부담_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_2Fnd4vTNEeatWYWiC66E2A" name="개설비 부담 유형_To_참가자 n/1 부담_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_2gs3YPTNEeatWYWiC66E2A" target="_DjyakPTLEeatWYWiC66E2A" source="_B6wAMPTLEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_2gs3YfTNEeatWYWiC66E2A" name="참가자 n/1 부담_To_모임 인증_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_2gs3YvTNEeatWYWiC66E2A" name="참가자 n/1 부담_To_모임 인증_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3DgpgPTNEeatWYWiC66E2A" target="_EWqpAPTLEeatWYWiC66E2A" source="_DjyakPTLEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_3DgpgfTNEeatWYWiC66E2A" name="모임 인증_To_마이페이지(내가 개설한 모임)_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_3DgpgvTNEeatWYWiC66E2A" name="모임 인증_To_마이페이지(내가 개설한 모임)_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3g0QkPTNEeatWYWiC66E2A" target="_X2bNUPTLEeatWYWiC66E2A" source="_EWqpAPTLEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_3g0QkfTNEeatWYWiC66E2A" name="마이페이지(내가 개설한 모임)_To_ActivityFinal1_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_3hHLgPTNEeatWYWiC66E2A" name="마이페이지(내가 개설한 모임)_To_ActivityFinal1_weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_Lv4uwPTKEeatWYWiC66E2A" name="Initial1" outgoing="_zJ3ecPTNEeatWYWiC66E2A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_r2TRkPTKEeatWYWiC66E2A" name="모임 개설" incoming="_zJ3ecPTNEeatWYWiC66E2A" outgoing="_z9DO4PTNEeatWYWiC66E2A" body=""/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_0ZVpoPTKEeatWYWiC66E2A" name="개설비 부담 유형" incoming="_0p-mUPTNEeatWYWiC66E2A" outgoing="_1axxIPTNEeatWYWiC66E2A _2Fnd4PTNEeatWYWiC66E2A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_4IteYPTKEeatWYWiC66E2A" name="모임 정보 입력" incoming="_z9DO4PTNEeatWYWiC66E2A" outgoing="_0p-mUPTNEeatWYWiC66E2A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_4Row4PTKEeatWYWiC66E2A" name="판매자 부담" incoming="_1axxIPTNEeatWYWiC66E2A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_B6wAMPTLEeatWYWiC66E2A" name="참가자 1/n 부담" incoming="_2Fnd4PTNEeatWYWiC66E2A" outgoing="_2gs3YPTNEeatWYWiC66E2A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_DjyakPTLEeatWYWiC66E2A" name="모임 인증" incoming="_2gs3YPTNEeatWYWiC66E2A" outgoing="_3DgpgPTNEeatWYWiC66E2A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_EWqpAPTLEeatWYWiC66E2A" name="     마이페이지   (내가 개설한 모임)" incoming="_3DgpgPTNEeatWYWiC66E2A" outgoing="_3g0QkPTNEeatWYWiC66E2A"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_X2bNUPTLEeatWYWiC66E2A" name="ActivityFinal1" incoming="_3g0QkPTNEeatWYWiC66E2A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_p__v4PTNEeatWYWiC66E2A" name="관통 시나리오" node="_6Zl0gPTNEeatWYWiC66E2A _71PTIPTNEeatWYWiC66E2A _C2YaoPTOEeatWYWiC66E2A _FOIVIPTOEeatWYWiC66E2A _F2ANcPTOEeatWYWiC66E2A _Mzb5oPTOEeatWYWiC66E2A _NPjN4PTOEeatWYWiC66E2A _Nn8fwPTOEeatWYWiC66E2A _SMJDsPTOEeatWYWiC66E2A _aOS8QPTOEeatWYWiC66E2A _fNRXsPTOEeatWYWiC66E2A _lCsS8PTOEeatWYWiC66E2A _tXASgPTOEeatWYWiC66E2A _qyWrgP2BEeaexcL-H_sRmw _4Xo1cP2BEeaexcL-H_sRmw _GxTCoP2CEeaexcL-H_sRmw _G72s0P2CEeaexcL-H_sRmw _HEo1YP2CEeaexcL-H_sRmw _vy_eYP2CEeaexcL-H_sRmw _wY_cgP2EEeaexcL-H_sRmw _A_YnAP2FEeaexcL-H_sRmw _gzpC0P2FEeaexcL-H_sRmw _xN_VYP2FEeaexcL-H_sRmw _DDYprP2GEeaexcL-H_sRmw _DDYprv2GEeaexcL-H_sRmw _DDYpr_2GEeaexcL-H_sRmw _NGOnkP2GEeaexcL-H_sRmw _baq9kP2GEeaexcL-H_sRmw _cSdhMP2GEeaexcL-H_sRmw _d4E0IP2GEeaexcL-H_sRmw _fNd5wP2GEeaexcL-H_sRmw _lQlSwP2GEeaexcL-H_sRmw _o9uS4P2GEeaexcL-H_sRmw _w4ctwP2GEeaexcL-H_sRmw _05-CcP2GEeaexcL-H_sRmw _-jh9sP2GEeaexcL-H_sRmw _PuEXEP2HEeaexcL-H_sRmw _bIP7YP2HEeaexcL-H_sRmw _xDfDoP2HEeaexcL-H_sRmw _4IDSkP2HEeaexcL-H_sRmw _6edwUP2HEeaexcL-H_sRmw">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_4pTGIPTOEeatWYWiC66E2A" target="_FOIVIPTOEeatWYWiC66E2A" source="_C2YaoPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_4pTGIfTOEeatWYWiC66E2A" name="검색 유형_To_카테고리 검색_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_4pTGIvTOEeatWYWiC66E2A" name="검색 유형_To_카테고리 검색_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_5HzAAPTOEeatWYWiC66E2A" target="_F2ANcPTOEeatWYWiC66E2A" source="_C2YaoPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_5HzAAfTOEeatWYWiC66E2A" name="검색 유형_To_맞춤 검색_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_5HzAAvTOEeatWYWiC66E2A" name="검색 유형_To_맞춤 검색_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_8MLXAPTOEeatWYWiC66E2A" target="_Mzb5oPTOEeatWYWiC66E2A" source="_F2ANcPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_8MLXAfTOEeatWYWiC66E2A" name="맞춤 검색_To_검색 리스트 조회_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_8MLXAvTOEeatWYWiC66E2A" name="맞춤 검색_To_검색 리스트 조회_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_AhM2gPTPEeatWYWiC66E2A" source="_aOS8QPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_AhM2gfTPEeatWYWiC66E2A" name="결제 유형_To_카드_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_AhM2gvTPEeatWYWiC66E2A" name="결제 유형_To_카드_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BJ0VsPTPEeatWYWiC66E2A" target="_SMJDsPTOEeatWYWiC66E2A" source="_aOS8QPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_BJ0VsfTPEeatWYWiC66E2A" name="결제 유형_To_휴대폰 _guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_BJ0VsvTPEeatWYWiC66E2A" name="결제 유형_To_휴대폰 _weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Bp8nQPTPEeatWYWiC66E2A" target="_fNRXsPTOEeatWYWiC66E2A" source="_aOS8QPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_Bp8nQfTPEeatWYWiC66E2A" name="결제 유형_To_간편 결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_Bp8nQvTPEeatWYWiC66E2A" name="결제 유형_To_간편 결제_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xdfGwP2BEeaexcL-H_sRmw" target="_aOS8QPTOEeatWYWiC66E2A" source="_NPjN4PTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_xdfGwf2BEeaexcL-H_sRmw" name="모임 정보 조회_To_인증수단_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_xd7LoP2BEeaexcL-H_sRmw" name="모임 정보 조회_To_인증수단_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_158D8P2BEeaexcL-H_sRmw" target="_Nn8fwPTOEeatWYWiC66E2A" source="_SMJDsPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_158D8f2BEeaexcL-H_sRmw" name="휴대폰_To_본인 인증_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_16O-4P2BEeaexcL-H_sRmw" name="휴대폰_To_본인 인증_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_At4HoP2CEeaexcL-H_sRmw" target="_4Xo1cP2BEeaexcL-H_sRmw" source="_Nn8fwPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_At4Hof2CEeaexcL-H_sRmw" name="본인 인증_To_결제수단_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_At4Hov2CEeaexcL-H_sRmw" name="본인 인증_To_결제수단_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_PWaeUP2CEeaexcL-H_sRmw" target="_HEo1YP2CEeaexcL-H_sRmw" source="_4Xo1cP2BEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_PWaeUf2CEeaexcL-H_sRmw" name="결제수단_To_휴대폰_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_PW3KQP2CEeaexcL-H_sRmw" name="결제수단_To_휴대폰_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_P06YMP2CEeaexcL-H_sRmw" target="_GxTCoP2CEeaexcL-H_sRmw" source="_4Xo1cP2BEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_P06YMf2CEeaexcL-H_sRmw" name="결제수단_To_신용카드_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_P06YMv2CEeaexcL-H_sRmw" name="결제수단_To_신용카드_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_bk9e0P2CEeaexcL-H_sRmw" target="_G72s0P2CEeaexcL-H_sRmw" source="_4Xo1cP2BEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_bk9e0f2CEeaexcL-H_sRmw" name="결제수단_To_간편 결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_bk9e0v2CEeaexcL-H_sRmw" name="결제수단_To_간편 결제_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_c5dzoP2CEeaexcL-H_sRmw" target="_qyWrgP2BEeaexcL-H_sRmw" source="_G72s0P2CEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_c5dzof2CEeaexcL-H_sRmw" name="간편 결제_To_결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_c5dzov2CEeaexcL-H_sRmw" name="간편 결제_To_결제_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fyGNoP2CEeaexcL-H_sRmw" target="_lCsS8PTOEeatWYWiC66E2A" source="_qyWrgP2BEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_fyGNof2CEeaexcL-H_sRmw" name="결제_To_마이 페이지(내가 참가한 모임)_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_fyGNov2CEeaexcL-H_sRmw" name="결제_To_마이 페이지(내가 참가한 모임)_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_gVpmoP2CEeaexcL-H_sRmw" target="_tXASgPTOEeatWYWiC66E2A" source="_lCsS8PTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_gVpmof2CEeaexcL-H_sRmw" name="마이 페이지(내가 참가한 모임)_To_ActivityFinal1_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_gV8hkP2CEeaexcL-H_sRmw" name="마이 페이지(내가 참가한 모임)_To_ActivityFinal1_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yLCT0P2CEeaexcL-H_sRmw" target="_vy_eYP2CEeaexcL-H_sRmw" source="_Mzb5oPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_yLCT0f2CEeaexcL-H_sRmw" name="검색 리스트 조회_To_Decision4_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_yLCT0v2CEeaexcL-H_sRmw" name="검색 리스트 조회_To_Decision4_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_4TDa8P2CEeaexcL-H_sRmw" name="예" target="_NPjN4PTOEeatWYWiC66E2A" source="_vy_eYP2CEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_4TDa8f2CEeaexcL-H_sRmw" name="Decision4_To_모임 정보 조회_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_4TDa8v2CEeaexcL-H_sRmw" name="Decision4_To_모임 정보 조회_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_6QBd8P2CEeaexcL-H_sRmw" name="아니요" target="_C2YaoPTOEeatWYWiC66E2A" source="_vy_eYP2CEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_6QBd8f2CEeaexcL-H_sRmw" name="Decision4_To_검색 유형_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_6QU_8P2CEeaexcL-H_sRmw" name="Decision4_To_검색 유형_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_zgpxAP2EEeaexcL-H_sRmw" target="_wY_cgP2EEeaexcL-H_sRmw" source="_6Zl0gPTNEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_zgpxAf2EEeaexcL-H_sRmw" name="_To_초기페이지_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_zg8r8P2EEeaexcL-H_sRmw" name="_To_초기페이지_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_4FvFwP2EEeaexcL-H_sRmw" target="_71PTIPTNEeatWYWiC66E2A" source="_wY_cgP2EEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_4F4PsP2EEeaexcL-H_sRmw" name="초기페이지_To_로그인_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_4F4Psf2EEeaexcL-H_sRmw" name="초기페이지_To_로그인_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_D5NT0P2FEeaexcL-H_sRmw" target="_A_YnAP2FEeaexcL-H_sRmw" source="_71PTIPTNEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_D5NT0f2FEeaexcL-H_sRmw" name="로그인_To_사용자의 이용유형_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_D5NT0v2FEeaexcL-H_sRmw" name="로그인_To_사용자의 이용유형_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FOJtgP2FEeaexcL-H_sRmw" name="모임 참가" target="_C2YaoPTOEeatWYWiC66E2A" source="_A_YnAP2FEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_FOJtgf2FEeaexcL-H_sRmw" name="사용자의 이용유형_To_검색 유형_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_FOJtgv2FEeaexcL-H_sRmw" name="사용자의 이용유형_To_검색 유형_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jAriIP2FEeaexcL-H_sRmw" name="모임 개설" target="_gzpC0P2FEeaexcL-H_sRmw" source="_A_YnAP2FEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_jAriIf2FEeaexcL-H_sRmw" name="사용자의 이용유형_To_모임 개설_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jAriIv2FEeaexcL-H_sRmw" name="사용자의 이용유형_To_모임 개설_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_z-cDwP2FEeaexcL-H_sRmw" target="_xN_VYP2FEeaexcL-H_sRmw" source="_gzpC0P2FEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_z-cDwf2FEeaexcL-H_sRmw" name="모임 개설_To_모임 정보 입력_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_z-l0wP2FEeaexcL-H_sRmw" name="모임 개설_To_모임 정보 입력_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_DDYpoP2GEeaexcL-H_sRmw" target="_NGOnkP2GEeaexcL-H_sRmw" source="_DDYprv2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_DDYpof2GEeaexcL-H_sRmw" name="결제 유형_To_휴대폰 _guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_DDYpov2GEeaexcL-H_sRmw" name="결제 유형_To_휴대폰 _weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_DDYpo_2GEeaexcL-H_sRmw" source="_DDYprv2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_DDYppP2GEeaexcL-H_sRmw" name="결제 유형_To_간편 결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_DDYppf2GEeaexcL-H_sRmw" name="결제 유형_To_간편 결제_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_DDYppv2GEeaexcL-H_sRmw" target="_DDYprv2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_DDYpp_2GEeaexcL-H_sRmw" name="모임 정보 조회_To_인증수단_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_DDYpqP2GEeaexcL-H_sRmw" name="모임 정보 조회_To_인증수단_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_S3L5kP2GEeaexcL-H_sRmw" target="_DDYpr_2GEeaexcL-H_sRmw" source="_DDYprv2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_S3L5kf2GEeaexcL-H_sRmw" name="인증수단_To_휴대폰_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_S3L5kv2GEeaexcL-H_sRmw" name="인증수단_To_휴대폰_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_TeKaAP2GEeaexcL-H_sRmw" target="_DDYprv2GEeaexcL-H_sRmw" source="_xN_VYP2FEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_TeKaAf2GEeaexcL-H_sRmw" name="모임 정보 입력_To_인증수단_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_TeKaAv2GEeaexcL-H_sRmw" name="모임 정보 입력_To_인증수단_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ZJ6b4P2GEeaexcL-H_sRmw" target="_DDYprP2GEeaexcL-H_sRmw" source="_DDYpr_2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_ZJ6b4f2GEeaexcL-H_sRmw" name="휴대폰_To_본인 인증_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_ZJ6b4v2GEeaexcL-H_sRmw" name="휴대폰_To_본인 인증_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ibOPMP2GEeaexcL-H_sRmw" target="_baq9kP2GEeaexcL-H_sRmw" source="_DDYprP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_ibYAMP2GEeaexcL-H_sRmw" name="본인 인증_To_결제수단_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_ibYAMf2GEeaexcL-H_sRmw" name="본인 인증_To_결제수단_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_i6ng8P2GEeaexcL-H_sRmw" target="_d4E0IP2GEeaexcL-H_sRmw" source="_baq9kP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_i6ng8f2GEeaexcL-H_sRmw" name="결제수단_To_간편 결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_i6ng8v2GEeaexcL-H_sRmw" name="결제수단_To_간편 결제_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jSICAP2GEeaexcL-H_sRmw" target="_cSdhMP2GEeaexcL-H_sRmw" source="_baq9kP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_jSICAf2GEeaexcL-H_sRmw" name="결제수단_To_휴대폰_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jSICAv2GEeaexcL-H_sRmw" name="결제수단_To_휴대폰_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jtDDcP2GEeaexcL-H_sRmw" target="_fNd5wP2GEeaexcL-H_sRmw" source="_baq9kP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_jtDDcf2GEeaexcL-H_sRmw" name="결제수단_To_신용카드_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jtDDcv2GEeaexcL-H_sRmw" name="결제수단_To_신용카드_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_myUyUP2GEeaexcL-H_sRmw" target="_lQlSwP2GEeaexcL-H_sRmw" source="_d4E0IP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_myUyUf2GEeaexcL-H_sRmw" name="간편 결제_To_결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_myd8QP2GEeaexcL-H_sRmw" name="간편 결제_To_결제_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_vtnSUP2GEeaexcL-H_sRmw" target="_o9uS4P2GEeaexcL-H_sRmw" source="_lQlSwP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_vtnSUf2GEeaexcL-H_sRmw" name="결제_To_모임 개설비 부담 유형_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_vtnSUv2GEeaexcL-H_sRmw" name="결제_To_모임 개설비 부담 유형_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3_PxUP2GEeaexcL-H_sRmw" target="_w4ctwP2GEeaexcL-H_sRmw" source="_o9uS4P2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_3_PxUf2GEeaexcL-H_sRmw" name="모임 개설비 부담 유형_To_판매자 부담_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_3_PxUv2GEeaexcL-H_sRmw" name="모임 개설비 부담 유형_To_판매자 부담_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_43VP4P2GEeaexcL-H_sRmw" target="_05-CcP2GEeaexcL-H_sRmw" source="_o9uS4P2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_43VP4f2GEeaexcL-H_sRmw" name="모임 개설비 부담 유형_To_1/n 부담_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_43VP4v2GEeaexcL-H_sRmw" name="모임 개설비 부담 유형_To_1/n 부담_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_FkYKQP2HEeaexcL-H_sRmw" target="_-jh9sP2GEeaexcL-H_sRmw" source="_05-CcP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_FkYKQf2HEeaexcL-H_sRmw" name="1/n 부담_To_모임 정보 이상 유무_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_Fkh7QP2HEeaexcL-H_sRmw" name="1/n 부담_To_모임 정보 이상 유무_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_LD7jMP2HEeaexcL-H_sRmw" name="이상 있음" target="_xN_VYP2FEeaexcL-H_sRmw" source="_-jh9sP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_LD7jMf2HEeaexcL-H_sRmw" name="모임 정보 이상 유무_To_모임 정보 입력_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_LD7jMv2HEeaexcL-H_sRmw" name="모임 정보 이상 유무_To_모임 정보 입력_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_QrEK0P2HEeaexcL-H_sRmw" name="이상 없음" target="_PuEXEP2HEeaexcL-H_sRmw" source="_-jh9sP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_QrEK0f2HEeaexcL-H_sRmw" name="모임 정보 이상 유무_To_판매자 부담_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_QrEK0v2HEeaexcL-H_sRmw" name="모임 정보 이상 유무_To_판매자 부담_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_eWTLwP2HEeaexcL-H_sRmw" target="_bIP7YP2HEeaexcL-H_sRmw" source="_PuEXEP2HEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_eWTLwf2HEeaexcL-H_sRmw" name="모임 인증_To_마이 페이지(내가 개설한 모임)_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_eWTLwv2HEeaexcL-H_sRmw" name="모임 인증_To_마이 페이지(내가 개설한 모임)_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fUCmYP2HEeaexcL-H_sRmw" target="_tXASgPTOEeatWYWiC66E2A" source="_bIP7YP2HEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_fUCmYf2HEeaexcL-H_sRmw" name="마이 페이지(내가 개설한 모임)_To_ActivityFinal1_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_fUCmYv2HEeaexcL-H_sRmw" name="마이 페이지(내가 개설한 모임)_To_ActivityFinal1_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_znIsIP2HEeaexcL-H_sRmw" target="_xDfDoP2HEeaexcL-H_sRmw" source="_lCsS8PTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_znIsIf2HEeaexcL-H_sRmw" name="마이 페이지(내가 참가한 모임)_To_모임 참여 후 일주일 초과?_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_znIsIv2HEeaexcL-H_sRmw" name="마이 페이지(내가 참가한 모임)_To_모임 참여 후 일주일 초과?_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_9JZskP2HEeaexcL-H_sRmw" name="아니요" target="_4IDSkP2HEeaexcL-H_sRmw" source="_xDfDoP2HEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_9JZskf2HEeaexcL-H_sRmw" name="모임 참여 후 일주일 초과?_To_모임 후기 작성_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_9JZskv2HEeaexcL-H_sRmw" name="모임 참여 후 일주일 초과?_To_모임 후기 작성_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_9ijMYP2HEeaexcL-H_sRmw" name="예" target="_6edwUP2HEeaexcL-H_sRmw" source="_xDfDoP2HEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_9ijMYf2HEeaexcL-H_sRmw" name="모임 참여 후 일주일 초과?_To_경고 메세지_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_9ijMYv2HEeaexcL-H_sRmw" name="모임 참여 후 일주일 초과?_To_경고 메세지_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_C6W-kP2IEeaexcL-H_sRmw" target="_tXASgPTOEeatWYWiC66E2A" source="_4IDSkP2HEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_C6W-kf2IEeaexcL-H_sRmw" name="모임 후기 작성_To_ActivityFinal1_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_C6W-kv2IEeaexcL-H_sRmw" name="모임 후기 작성_To_ActivityFinal1_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_dvDwIP2IEeaexcL-H_sRmw" target="_DDYprP2GEeaexcL-H_sRmw" source="_NGOnkP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_dvDwIf2IEeaexcL-H_sRmw" name="아이핀_To_본인 인증_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_dvDwIv2IEeaexcL-H_sRmw" name="아이핀_To_본인 인증_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jnT88P2IEeaexcL-H_sRmw" target="_lQlSwP2GEeaexcL-H_sRmw" source="_fNd5wP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_jnT88f2IEeaexcL-H_sRmw" name="신용카드_To_결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jnT88v2IEeaexcL-H_sRmw" name="신용카드_To_결제_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_kRtk0P2IEeaexcL-H_sRmw" target="_lQlSwP2GEeaexcL-H_sRmw" source="_cSdhMP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_kRtk0f2IEeaexcL-H_sRmw" name="휴대폰_To_결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_kRtk0v2IEeaexcL-H_sRmw" name="휴대폰_To_결제_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_lYiC8P2IEeaexcL-H_sRmw" target="_-jh9sP2GEeaexcL-H_sRmw" source="_w4ctwP2GEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_lYiC8f2IEeaexcL-H_sRmw" name="판매자 부담_To_모임 정보 이상 유무_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_lYiC8v2IEeaexcL-H_sRmw" name="판매자 부담_To_모임 정보 이상 유무_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_pRkxEP2IEeaexcL-H_sRmw" target="_Mzb5oPTOEeatWYWiC66E2A" source="_FOIVIPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_pRkxEf2IEeaexcL-H_sRmw" name="카테고리 검색_To_사용자가 선호하는 모임의 존재 유무_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_pRkxEv2IEeaexcL-H_sRmw" name="카테고리 검색_To_사용자가 선호하는 모임의 존재 유무_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_64-soP2IEeaexcL-H_sRmw" target="_Nn8fwPTOEeatWYWiC66E2A" source="_fNRXsPTOEeatWYWiC66E2A">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_64-sof2IEeaexcL-H_sRmw" name="아이핀_To_본인 인증_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_64-sov2IEeaexcL-H_sRmw" name="아이핀_To_본인 인증_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_bfE1EP2JEeaexcL-H_sRmw" target="_qyWrgP2BEeaexcL-H_sRmw" source="_GxTCoP2CEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_bfE1Ef2JEeaexcL-H_sRmw" name="신용카드_To_결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_bfE1Ev2JEeaexcL-H_sRmw" name="신용카드_To_결제_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_cVrF4P2JEeaexcL-H_sRmw" target="_qyWrgP2BEeaexcL-H_sRmw" source="_HEo1YP2CEeaexcL-H_sRmw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_cVrF4f2JEeaexcL-H_sRmw" name="휴대폰_To_결제_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_cVrF4v2JEeaexcL-H_sRmw" name="휴대폰_To_결제_weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_6Zl0gPTNEeatWYWiC66E2A" outgoing="_zgpxAP2EEeaexcL-H_sRmw">
+      <name xsi:nil="true"/>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_71PTIPTNEeatWYWiC66E2A" name="로그인" incoming="_4FvFwP2EEeaexcL-H_sRmw" outgoing="_D5NT0P2FEeaexcL-H_sRmw" body=""/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_C2YaoPTOEeatWYWiC66E2A" name="검색 유형" incoming="_6QBd8P2CEeaexcL-H_sRmw _FOJtgP2FEeaexcL-H_sRmw" outgoing="_4pTGIPTOEeatWYWiC66E2A _5HzAAPTOEeatWYWiC66E2A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_FOIVIPTOEeatWYWiC66E2A" name="카테고리 검색" incoming="_4pTGIPTOEeatWYWiC66E2A" outgoing="_pRkxEP2IEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_F2ANcPTOEeatWYWiC66E2A" name="맞춤 검색" incoming="_5HzAAPTOEeatWYWiC66E2A" outgoing="_8MLXAPTOEeatWYWiC66E2A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Mzb5oPTOEeatWYWiC66E2A" name="검색 리스트 조회" incoming="_8MLXAPTOEeatWYWiC66E2A _pRkxEP2IEeaexcL-H_sRmw" outgoing="_yLCT0P2CEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_NPjN4PTOEeatWYWiC66E2A" name="모임 정보 조회" incoming="_4TDa8P2CEeaexcL-H_sRmw" outgoing="_xdfGwP2BEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Nn8fwPTOEeatWYWiC66E2A" name="본인 인증" incoming="_158D8P2BEeaexcL-H_sRmw _64-soP2IEeaexcL-H_sRmw" outgoing="_At4HoP2CEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_SMJDsPTOEeatWYWiC66E2A" name="휴대폰" incoming="_BJ0VsPTPEeatWYWiC66E2A" outgoing="_158D8P2BEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_aOS8QPTOEeatWYWiC66E2A" name="인증수단" incoming="_xdfGwP2BEeaexcL-H_sRmw" outgoing="_AhM2gPTPEeatWYWiC66E2A _BJ0VsPTPEeatWYWiC66E2A _Bp8nQPTPEeatWYWiC66E2A"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_fNRXsPTOEeatWYWiC66E2A" name="아이핀" incoming="_Bp8nQPTPEeatWYWiC66E2A" outgoing="_64-soP2IEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_lCsS8PTOEeatWYWiC66E2A" name="마이 페이지(내가 참가한 모임)" incoming="_fyGNoP2CEeaexcL-H_sRmw" outgoing="_gVpmoP2CEeaexcL-H_sRmw _znIsIP2HEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_tXASgPTOEeatWYWiC66E2A" name="ActivityFinal1" incoming="_gVpmoP2CEeaexcL-H_sRmw _fUCmYP2HEeaexcL-H_sRmw _C6W-kP2IEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_qyWrgP2BEeaexcL-H_sRmw" name="결제" incoming="_c5dzoP2CEeaexcL-H_sRmw _bfE1EP2JEeaexcL-H_sRmw _cVrF4P2JEeaexcL-H_sRmw" outgoing="_fyGNoP2CEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_4Xo1cP2BEeaexcL-H_sRmw" name="결제수단" incoming="_At4HoP2CEeaexcL-H_sRmw" outgoing="_PWaeUP2CEeaexcL-H_sRmw _P06YMP2CEeaexcL-H_sRmw _bk9e0P2CEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_GxTCoP2CEeaexcL-H_sRmw" name="신용카드" incoming="_P06YMP2CEeaexcL-H_sRmw" outgoing="_bfE1EP2JEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_G72s0P2CEeaexcL-H_sRmw" name="간편 결제" incoming="_bk9e0P2CEeaexcL-H_sRmw" outgoing="_c5dzoP2CEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_HEo1YP2CEeaexcL-H_sRmw" name="휴대폰" incoming="_PWaeUP2CEeaexcL-H_sRmw" outgoing="_cVrF4P2JEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_vy_eYP2CEeaexcL-H_sRmw" name="사용자가 선호하는 모임의 존재 유무" incoming="_yLCT0P2CEeaexcL-H_sRmw" outgoing="_4TDa8P2CEeaexcL-H_sRmw _6QBd8P2CEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_wY_cgP2EEeaexcL-H_sRmw" name="초기페이지" incoming="_zgpxAP2EEeaexcL-H_sRmw" outgoing="_4FvFwP2EEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_A_YnAP2FEeaexcL-H_sRmw" name="사용자의 이용유형" incoming="_D5NT0P2FEeaexcL-H_sRmw" outgoing="_FOJtgP2FEeaexcL-H_sRmw _jAriIP2FEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_gzpC0P2FEeaexcL-H_sRmw" name="모임 개설" incoming="_jAriIP2FEeaexcL-H_sRmw" outgoing="_z-cDwP2FEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_xN_VYP2FEeaexcL-H_sRmw" name="모임 정보 입력" incoming="_z-cDwP2FEeaexcL-H_sRmw _LD7jMP2HEeaexcL-H_sRmw" outgoing="_TeKaAP2GEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_DDYprP2GEeaexcL-H_sRmw" name="본인 인증" incoming="_ZJ6b4P2GEeaexcL-H_sRmw _dvDwIP2IEeaexcL-H_sRmw" outgoing="_ibOPMP2GEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_DDYprv2GEeaexcL-H_sRmw" name="인증수단" incoming="_DDYppv2GEeaexcL-H_sRmw _TeKaAP2GEeaexcL-H_sRmw" outgoing="_DDYpoP2GEeaexcL-H_sRmw _DDYpo_2GEeaexcL-H_sRmw _S3L5kP2GEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_DDYpr_2GEeaexcL-H_sRmw" name="휴대폰" incoming="_S3L5kP2GEeaexcL-H_sRmw" outgoing="_ZJ6b4P2GEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_NGOnkP2GEeaexcL-H_sRmw" name="아이핀" incoming="_DDYpoP2GEeaexcL-H_sRmw" outgoing="_dvDwIP2IEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_baq9kP2GEeaexcL-H_sRmw" name="결제수단" incoming="_ibOPMP2GEeaexcL-H_sRmw" outgoing="_i6ng8P2GEeaexcL-H_sRmw _jSICAP2GEeaexcL-H_sRmw _jtDDcP2GEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_cSdhMP2GEeaexcL-H_sRmw" name="휴대폰" incoming="_jSICAP2GEeaexcL-H_sRmw" outgoing="_kRtk0P2IEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_d4E0IP2GEeaexcL-H_sRmw" name="간편 결제" incoming="_i6ng8P2GEeaexcL-H_sRmw" outgoing="_myUyUP2GEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_fNd5wP2GEeaexcL-H_sRmw" name="신용카드" incoming="_jtDDcP2GEeaexcL-H_sRmw" outgoing="_jnT88P2IEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_lQlSwP2GEeaexcL-H_sRmw" name="결제" incoming="_myUyUP2GEeaexcL-H_sRmw _jnT88P2IEeaexcL-H_sRmw _kRtk0P2IEeaexcL-H_sRmw" outgoing="_vtnSUP2GEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_o9uS4P2GEeaexcL-H_sRmw" name="모임 개설비 부담 유형" incoming="_vtnSUP2GEeaexcL-H_sRmw" outgoing="_3_PxUP2GEeaexcL-H_sRmw _43VP4P2GEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_w4ctwP2GEeaexcL-H_sRmw" name="판매자 부담" incoming="_3_PxUP2GEeaexcL-H_sRmw" outgoing="_lYiC8P2IEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_05-CcP2GEeaexcL-H_sRmw" name="1/n 부담" incoming="_43VP4P2GEeaexcL-H_sRmw" outgoing="_FkYKQP2HEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_-jh9sP2GEeaexcL-H_sRmw" name="모임 정보 이상 유무" incoming="_FkYKQP2HEeaexcL-H_sRmw _lYiC8P2IEeaexcL-H_sRmw" outgoing="_LD7jMP2HEeaexcL-H_sRmw _QrEK0P2HEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_PuEXEP2HEeaexcL-H_sRmw" name="모임 인증" incoming="_QrEK0P2HEeaexcL-H_sRmw" outgoing="_eWTLwP2HEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_bIP7YP2HEeaexcL-H_sRmw" name="마이 페이지(내가 개설한 모임)" incoming="_eWTLwP2HEeaexcL-H_sRmw" outgoing="_fUCmYP2HEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_xDfDoP2HEeaexcL-H_sRmw" name="모임 참여 후 일주일 초과?" incoming="_znIsIP2HEeaexcL-H_sRmw" outgoing="_9JZskP2HEeaexcL-H_sRmw _9ijMYP2HEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_4IDSkP2HEeaexcL-H_sRmw" name="모임 후기 작성" incoming="_9JZskP2HEeaexcL-H_sRmw" outgoing="_C6W-kP2IEeaexcL-H_sRmw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_6edwUP2HEeaexcL-H_sRmw" name="경고 메세지" incoming="_9ijMYP2HEeaexcL-H_sRmw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_SmfPUP1_EeabiINjo3wFyw" name="NewModel"/>
+</uml:Model>
