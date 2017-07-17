@@ -8,9 +8,7 @@ public class SupplierExample {
 			int num = (int) (Math.random() * 6) +1;
 			return num;
 		};
-		
 		int num = intSupplier.getAsInt();
 		System.out.println("´«ÀÇ ¼ö: " + num);
 	}
-
 }
